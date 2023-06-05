@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-cachemanager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "CacheManager.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "hashmap": "^2.4.0",
+    "lru-cache": "^9.1.2"
+  }
+}

@@ -8,6 +8,20 @@ class CacheManager {
          this.map = new HashMap(); 
         }
 
+    setCache(key, value, options) {
+         options = {
+            max: 500,
+          
+            // for use with tracking overall storage size
+            maxSize: 5000,
+            sizeCalculation: (value, key) => {
+              return 1
+            }
+        }
+        const cache = new LRUCache(options);
+        this.map = cache.set(key, value);
+    }
+
 
     createCache(cacheName, options) {
         options = {
